@@ -23,7 +23,7 @@ const CourseGrid = ({deleteCourse,
         <i className="fas fa-list fa-2x float-right mr-4"></i>
       </Link>
   </div>
-    <div class="row position-relative course-card">
+    <div class="row position-relative course-card p-5">
     {
       courses.map((course, ndx) =>
         <CourseCard updateCourse={updateCourse}
