@@ -1,0 +1,123 @@
+div.table-row {
+    padding: 10px;
+    border: 1px solid #b3b3b3;
+    background-color: white;
+}
+
+div.row.first {
+    background-color: #007bff;
+    border: none;
+    padding: 10px;
+}
+
+i.fas.fa-list {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+}
+
+i.fas.fa-th {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+}
+
+i.fa.fa-user {
+    color: #d9d9d9;
+    margin-left: 15px;
+}
+
+i.eight {
+    color: white;
+    background-color: #d9d9d9;
+    text-align: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.wbdv-sticky-top {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.wbdv-padding-5px {
+    padding: 5px;
+    padding-bottom: 0px;
+}
+
+body {
+    background-color: #d9d9d9;
+    padding: 0px;
+    margin: 0px;
+}
+
+div.row.second {
+    background-color: #b3b3b3;
+    padding: 15px;
+    border: none;
+}
+
+i.fa.fa-bars {
+    color: white;
+}
+
+h4 {
+    color: white;
+}
+
+i.fa.fa-plus.plus {
+    color: white;
+    background-color: #ff5252;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding: 5px;
+}
+
+i.fas.fa-trash:hover, i.fas.fa-edit:hover, i.fas.fa-check:hover {
+    cursor: pointer;
+}
+
+div.close {
+    position: absolute;
+    right: 0px;
+    text-align: right;
+}
+
+div.container.courses {
+    position: relative;
+    top: 100px;
+}
+
+div.course-card {
+    top: 100px;
+}
+
+.thsymbol {
+    right: 15px;
+}
+
+div.plus {
+    position: fixed;
+    right: 50px;
+    z-index: 1;
+    bottom: 50px;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    background-color: #ff5252;
+    border-radius: 50%;
+    color: white;
+    padding: 25px;
+}
+
+div.plus:hover {
+ cursor: pointer;
+}
+
+.first .add:hover {
+ cursor: pointer;
+}
