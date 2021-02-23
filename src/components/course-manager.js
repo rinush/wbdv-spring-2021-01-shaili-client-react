@@ -75,6 +75,9 @@ class CourseManager extends React.Component {
       })
       }
 
+  findCourseById = courseId =>
+          this.courseService.findCourseById(courseId)
+
   render() {
     return(
       <div>
