@@ -81,7 +81,7 @@ class CourseManager extends React.Component {
   render() {
     return(
       <div>
-        <Route path="/courses/table">
+        <Route path="/courses/table" exact={true}>
           <CourseTable
               addCourse = {this.addCourse}
               updateCourse={this.updateCourse}
@@ -90,7 +90,7 @@ class CourseManager extends React.Component {
               courses={this.state.courses}
               coursetitle={this.state.coursetitle} />
         </Route>
-        <Route path="/courses/grid">
+        <Route path="/courses/grid" exact={true}>
           <CourseGrid
               addCourse = {this.addCourse}
               updateCourse={this.updateCourse}
@@ -99,7 +99,12 @@ class CourseManager extends React.Component {
               courses={this.state.courses}
               coursetitle={this.state.coursetitle} />
         </Route>
-          <Route path="/courses/editor"
+          <Route path={[
+                      "/courses/:layout/edit/:courseId",
+                      "/courses/:layout/edit/:courseId/modules/:moduleId",
+                      "/courses/:layout/edit/:courseId/modules/:moduleId/lessons/:lessonId",
+                      "/courses/:layout/edit/:courseId/modules/:moduleId/lessons/:lessonId/topics/:topicId"]}
+                 exact = {true}
                  render={(props) => <CourseEditor {...props}/>}>
           </Route>
       </div>

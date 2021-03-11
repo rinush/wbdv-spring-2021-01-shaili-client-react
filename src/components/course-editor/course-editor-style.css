@@ -75,3 +75,27 @@ a:hover {
     color: white;
 }
 
+.editor-element{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+}
+
+.editor-module-topic{
+    position: relative;
+    top: 100px;
+}
+
+
+.total_modules {
+    color: white;
+    padding: 15px;
+    background-color: gray;
+}
+
+.addModule{
+    color: white;
+    background-color: #454445;
+    border-width: 0px;
+
+}

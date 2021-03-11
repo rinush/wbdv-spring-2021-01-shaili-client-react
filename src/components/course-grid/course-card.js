@@ -30,7 +30,7 @@ const CourseCard = ({course,
           <img src={``}/>
         {
         !editing &&
-        <Link to="/courses/editor" className="btn btn-primary">
+        <Link to={`/courses/grid/edit/${course._id}`} className="btn btn-primary">
             {course.title}
         </Link>
         }

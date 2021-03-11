@@ -1,7 +1,7 @@
 import React from 'react'
 import './course-editor-style.css'
 
-const CourseEditorTopElement = ({history}) =>
+const CourseEditorTopElement = ({history, title}) =>
 
 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-dark">
     <button class="navbar-toggler mr-2"
@@ -13,7 +13,7 @@ const CourseEditorTopElement = ({history}) =>
 
     <a class="navbar-brand text-white ml-2" href="#">
         <i class="fas fa-times close-editor" onClick={() => history.goBack()}></i>
-        CS 5610 - Web Development
+        {title}
     </a>
 
 

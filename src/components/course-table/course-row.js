@@ -28,7 +28,7 @@ const CourseRow = (
           <div class="col-xs-6 col-md-4 col-lg-5">
           {
               !editing &&
-              <Link to="/courses/editor">
+              <Link to={`/courses/table/edit/${course._id}`}>
                   <i class="fa fa-file"></i>
                   {title}
               </Link>
@@ -56,30 +56,6 @@ const CourseRow = (
               {editing && <i onClick={() => saveTitle()} className="fas fa-check"></i>}
           </div>
      </div>
-//      <tr>
-//        <td>
-//            {
-//                !editing &&
-//                <Link to="/courses/editor">
-//                    {title}
-//                </Link>
-//            }
-//            {
-//                editing &&
-//                <input
-//                    onChange={(event) => setNewTitle(event.target.value)}
-//                    value={newTitle}
-//                    className="form-control"/>
-//            }
-//        </td>
-//        <td>{owner}</td>
-//        <td>{lastModified}</td>
-//        <td>
-//            <i onClick={() => deleteCourse(course)} className="fas fa-trash"></i>
-//            {!editing && <i onClick={() => setEditing(true)} className="fas fa-edit"></i>}
-//            {editing && <i onClick={() => saveTitle()} className="fas fa-check"></i>}
-//        </td>
-//      </tr>
   )
 }
 export default CourseRow
