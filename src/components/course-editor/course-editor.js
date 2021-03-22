@@ -5,6 +5,7 @@ import CourseEditorTopElement from "./course-editor-top-element";
 import moduleReducer from "../../reducers/module-reducer";
 import lessonReducer from "../../reducers/lesson-reducer";
 import topicReducer from "../../reducers/topic-reducer";
+import widgetReducer from '../../reducers/widget-reducer';
 import {connect, Provider} from "react-redux";
 import {combineReducers, createStore} from "redux";
 import courseService from "../../services/course-service"
@@ -12,12 +13,14 @@ import lessonService from "../../services/lesson-service";
 import ModuleList from "./module-list";
 import LessonTabs from "./lesson-tabs";
 import TopicPills from "./topic-pills";
+import WidgetList from './widgets/widget-list';
 
 
 const reducer = combineReducers({
     moduleReducer: moduleReducer,
     lessonReducer: lessonReducer,
     topicReducer: topicReducer,
+    widgetReducer: widgetReducer,
 })
 
 const store = createStore(reducer)
@@ -37,7 +40,8 @@ const CourseEditor = ({history, params}) => {
         <Provider store={store}>
             <div class="editor-element">
                 <CourseEditorTopElement history = {history}
-                                        title = {newCourse.title} />
+                                        title = {newCourse.title}
+                                        layout = {layout} />
                 <div className="editor-module-topic">
                     <div className="row">
                         <div className="col-sm-3">
@@ -46,6 +50,7 @@ const CourseEditor = ({history, params}) => {
                         <div className="col-sm-9">
                             <LessonTabs/>
                             <TopicPills/>
+                            <WidgetList />
                         </div>
                     </div>
                 </div>
