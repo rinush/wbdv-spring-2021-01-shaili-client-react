@@ -5,6 +5,8 @@ import {useParams} from 'react-router-dom';
 import widgetService from '../../../services/widget-service';
 import HeadingWidget from './heading-widget';
 import ParagraphWidget from './paragraph-widget';
+import ListWidget from './list-widget';
+import ImageWidget from './image-widget';
 
 
 const WidgetList = (
@@ -62,6 +64,18 @@ const WidgetList = (
                 setWidget={setWidget}/> }
             {widget.type === "PARAGRAPH" &&
               <ParagraphWidget
+                widget={widget}
+                edit={editWidget.id === widget.id}
+                editWidget={editWidget}
+                setWidget={setWidget}/> }
+            {widget.type === "LIST" &&
+            <ListWidget
+                widget={widget}
+                edit={editWidget.id === widget.id}
+                editWidget={editWidget}
+                setWidget={setWidget}/> }
+            {widget.type === "IMAGE" &&
+            <ImageWidget
                 widget={widget}
                 edit={editWidget.id === widget.id}
                 editWidget={editWidget}

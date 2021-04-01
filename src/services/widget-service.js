@@ -1,4 +1,4 @@
-const URL = 'https://wbdv-spring-2021-01-shaili-ser.herokuapp.com/api'
+const URL = 'http://localhost:8080/api'
 
 export const findWidgetsForTopic = (topicId) =>
   fetch(`${URL}/topics/${topicId}/widgets`)
