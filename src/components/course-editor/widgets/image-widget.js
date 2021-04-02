@@ -3,7 +3,6 @@ import React from 'react'
 const ImageWidget = ({widget, edit, editWidget, setWidget}) => {
     return (
         <div>
-        <h1>Image Widget</h1>
             {
                 !edit &&
                 <div>
@@ -13,6 +12,15 @@ const ImageWidget = ({widget, edit, editWidget, setWidget}) => {
             {
                 edit &&
                 <div>
+                <select
+                  className="form-control"
+                  onChange={(e) => setWidget({...editWidget, type: e.target.value})}
+                  value={editWidget.type}>
+                    <option value={"HEADING"}>Heading</option>
+                    <option value={"PARAGRAPH"}>Paragraph</option>
+                    <option value={"IMAGE"}>Image</option>
+                    <option value={"LIST"}>List</option>
+                </select>
                     URL
                     <input onChange={(e) => setWidget(widget => ({...editWidget, src: e.target.value}))} value={editWidget.src} className="form-control"/>
                     width

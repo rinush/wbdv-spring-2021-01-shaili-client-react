@@ -3,7 +3,6 @@ import React from 'react'
 const ListWidget = ({widget, edit, editWidget, setWidget}) => {
     return (
         <div>
-        <h1>List Widget</h1>
             {
                 !edit &&
                 <>
@@ -36,6 +35,15 @@ const ListWidget = ({widget, edit, editWidget, setWidget}) => {
             {
                 edit &&
                 <div>
+                    <select
+                      className="form-control"
+                      onChange={(e) => setWidget({...editWidget, type: e.target.value})}
+                      value={editWidget.type}>
+                        <option value={"HEADING"}>Heading</option>
+                        <option value={"PARAGRAPH"}>Paragraph</option>
+                        <option value={"IMAGE"}>Image</option>
+                        <option value={"LIST"}>List</option>
+                    </select>
                     <input onChange={(e) => setWidget({...editWidget, ordered: e.target.checked})}  checked={editWidget.ordered} type="checkbox"/> Ordered
                     <br/>
                     List Items
