@@ -46,6 +46,10 @@ const CourseCard = ({course,
         {!editing && <i onClick={() => { setNewTitle('')
                                          return setEditing(true) }} className="fas fa-edit float-right mr-3"></i>}
         {editing && <i onClick={() => saveTitle()} className="fas fa-check float-right mr-3"></i>}
+
+        <Link to={`/courses/${course._id}/quizzes`}>
+            Quizzes
+        </Link>
       </div>
     </div>
   </div>)

@@ -48,6 +48,11 @@ const CourseRow = (
           <div class="col-lg-2 d-none d-lg-block">
               {lastModified}
           </div>
+          <div class="col-lg-1">
+              <Link to={`/courses/${course._id}/quizzes`}>
+                    Quizzes
+              </Link>
+          </div>
           <div class="col-xs-6 col-md-4 col-lg-1 close">
               <i onClick={() => deleteCourse(course)} className="fas fa-trash"></i>
               {!editing && <i onClick={() => { setNewTitle('')

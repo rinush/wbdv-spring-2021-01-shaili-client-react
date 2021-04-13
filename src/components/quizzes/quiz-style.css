@@ -1,0 +1,35 @@
+.quiz-header {
+    width: 100%;
+}
+
+.start {
+ background-color: blue;
+ padding: 10px;
+ border-radius: 5px;
+}
+
+.grade {
+    background-color: green;
+    color: white;
+    padding: 10px;
+}
+
+.option {
+    margin: 10px;
+}
+
+.rightAns {
+    background-color: green;
+}
+
+.wrongAns {
+    background-color: red;
+}
+
+.right {
+    color: green;
+}
+
+.wrong {
+    color: red;
+}
