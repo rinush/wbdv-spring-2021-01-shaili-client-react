@@ -48,7 +48,7 @@ const TrueFalseQuestion = ({question, currGrade}) => {
                     </div>
                 </div>
                 <div className="row">
-                    {ans !== null && <>Answer: {ans}</>}
+                    {ans !== null && <>Your answer: {ans}</>}
                 </div>
             </div>
         </div>

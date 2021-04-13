@@ -45,7 +45,7 @@ const MultipleChoiceQuestion = ({question, currGrade}) => {
                     }
                 </div>
                 <div>
-                    {ans !== null && <>Answer: {ans}</>}
+                    {ans !== null && <>Your answer: {ans}</>}
                 </div>
             </div>
         </div>
