@@ -34,7 +34,9 @@ const TrueFalseQuestion = ({question, currGrade}) => {
                             ${(currGrade ? (question.correct === "true" ? "rightAns"
                             : (ans === "true" ? "wrongAns" : "")): "")}`}>
                         <label>
-                            <input type="radio" onClick={() => {setAns("true")}} name={question._id} />
+                            <input type="radio" onClick={() => {
+                                question.answer="true"
+                                setAns("true")}} name={question._id} />
                                 True
                         </label>
                     </div>
@@ -42,7 +44,9 @@ const TrueFalseQuestion = ({question, currGrade}) => {
                             ${(currGrade ? (question.correct === "false" ? "rightAns"
                             : (ans === "false" ? "wrongAns" : "")): "")}`}>
                         <label>
-                            <input type="radio" onClick={() => {setAns("false")}} name={question._id}/>
+                            <input type="radio" onClick={() => {
+                                question.answer="false"
+                                setAns("false")}} name={question._id}/>
                                 False
                         </label>
                     </div>

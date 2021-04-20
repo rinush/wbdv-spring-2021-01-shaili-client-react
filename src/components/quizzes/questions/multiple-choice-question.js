@@ -37,7 +37,10 @@ const MultipleChoiceQuestion = ({question, currGrade}) => {
                                 ${(currGrade ? (question.correct === choice ? "rightAns"
                                             : (choice === ans ? "wrongAns" : "")) : "")}`}>
                                     <input type="radio" name={question._id}
-                                        onClick={() => {setAns(choice)}} value={choice} />
+                                        onClick={() => {
+                                            question.answer=choice
+                                            setAns(choice)
+                                            }} value={choice} />
                                     {choice}
                                 </label>
                             )
