@@ -18,8 +18,8 @@ class CourseManager extends React.Component {
     if (course.title == "") {
         course.title = "New Course"
     }
-                  course.lastModified = (new Date()).getMonth() + '/'
-                  + (new Date()).getDate() + '/' + (new Date()).getFullYear() + ''
+      course.lastModified = (new Date()).getMonth() + '/'
+      + (new Date()).getDate() + '/' + (new Date()).getFullYear() + ''
     courseService.updateCourse(course._id, course)
         .then(status => this.setState((prevState) => ({
           ...prevState,
@@ -73,7 +73,7 @@ class CourseManager extends React.Component {
         return  this.setState({
               coursetitle: event.target.value.trim()
       })
-      }
+  }
 
   findCourseById = courseId =>
           this.courseService.findCourseById(courseId)
