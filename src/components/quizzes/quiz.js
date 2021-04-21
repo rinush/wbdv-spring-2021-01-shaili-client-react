@@ -34,7 +34,7 @@ const Quiz = () => {
       <button className="grade" onClick={() => {
         quizService.submitQuiz(quizId, questions).then(res => {
             quizService.findQuizAttemptsScore(quizId).then(fetchedAttempts => {
-                setQuizAttempts(fetchedAttempts)
+                setQuizAttempts(fetchedAttempts);
             })
         })
       }}>
