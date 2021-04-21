@@ -41,16 +41,16 @@ const Quiz = () => {
         Submit Quiz
       </button>
       <h2>Quiz Results</h2>
-      <ul className="row">
-        {quizAttempts.map((quizAttempt, num) => {
+      <div className="row">
+        {quizAttempts.map((quizAttempt) => {
           return (
-            <li className="list-group-item">
-              Result {num + 1}: {quizAttempt.score}
-            </li>
+            <div className="col-lg-2">
+              Result: {quizAttempt.score}
+            </div>
           )
         })}
 
-      </ul>
+      </div>
     </div>
   );
 };
