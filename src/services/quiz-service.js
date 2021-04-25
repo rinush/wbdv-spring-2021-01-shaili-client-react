@@ -1,4 +1,4 @@
- const QUIZZES_URL = "http://localhost:3000/api/quizzes";
+ const QUIZZES_URL = "https://wbdv-spring21-react-db-node-se.herokuapp.com/api/quizzes";
 
 const findAllQuizzes = () =>
   fetch(QUIZZES_URL).then((response) => response.json());
